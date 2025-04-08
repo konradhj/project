@@ -40,8 +40,14 @@ void createWindow() {
     button1.setCallback(callback1);
 
     window.add(button2);
+    button2.setCallback(callback2);
+
     window.add(button3);
+    button3.setCallback(callback3);
+
     window.add(button4);
+    button4.setCallback(callback4);
+
     window.add(button5);
     window.add(button6);
     button6.setCallback(callback6);
