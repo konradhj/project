@@ -1,1 +1,3 @@
-Et eller annet 
+Plan for prosjekt:
+
+Karakterkalkulator
