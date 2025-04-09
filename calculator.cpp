@@ -11,6 +11,13 @@ void createWindow() {
     std::string windowTitle = "Kalkulator";
     TDT4102::AnimationWindow window(windowPositionX, windowPostitionY, windowWidth, windowHeight, windowTitle);
 
+    //Lager rektangel for det visuelle
+    TDT4102::Point rectanglePt {0, 100};
+    TDT4102::Color rectangleColor = TDT4102::Color::gray;
+    int rectangleWidth = 560;
+    int rectangleHeight = 150;
+    window.draw_rectangle(rectanglePt, rectangleWidth, rectangleHeight, rectangleColor);
+
     //Legger til knapper
     TDT4102::Button button1 = addButton({0, 540}, "1");
     TDT4102::Button button2 = addButton({140, 540}, "2");
@@ -101,6 +108,7 @@ void createWindow() {
 
     window.wait_for_close();
 
+    //Lager og oppdaterer teksten
 
 }
 
@@ -110,4 +118,11 @@ TDT4102::Button addButton(const TDT4102::Point& buttonPosition, const std::strin
     TDT4102::Button button {buttonPosition, buttonWidth, buttonHeight, buttonLabel};
 
     return button;
+}
+
+void updateText(std::string output, TDT4102::AnimationWindow window) {
+    TDT4102::Point location {10, 110};
+    TDT4102::Color textColor = TDT4102::Color::black;
+    int fontSize = 120;
+    window.draw_text(location, output, textColor, fontSize);
 }
