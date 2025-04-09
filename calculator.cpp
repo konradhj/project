@@ -36,6 +36,8 @@ void createWindow() {
     TDT4102::Button buttonNothing = addButton({0, 630}, "");
 
     //initialiserer knappene med callbackfunksjon og legger dem til i vinduet
+
+    //Tall
     window.add(button1);
     button1.setCallback(callback1);
 
@@ -50,37 +52,51 @@ void createWindow() {
 
     window.add(button5);
     button5.setCallback(callback5);
+
     window.add(button6);
     button6.setCallback(callback6);
 
     window.add(button7);
     button7.setCallback(callback7);
+
     window.add(button8);
     button8.setCallback(callback8);
+
     window.add(button9);
     button9.setCallback(callback9); 
+
     window.add(button0);
     button0.setCallback(callback0);
 
+    //Operasjoner
     window.add(buttonEquals);
     buttonEquals.setCallback(callbackEquals);
+
     window.add(buttonPlus);
     buttonPlus.setCallback(callbackPlus);
+
     window.add(buttonMinus);
     buttonMinus.setCallback(callbackMinus);
+
     window.add(buttonMultiply);
     buttonMultiply.setCallback(callbackMultiply);
+
     window.add(buttonDivide);
     buttonDivide.setCallback(callbackDivide);
 
+    //Diverse
     window.add(buttonC);
     buttonC.setCallback(callbackC);
+
     window.add(buttonCE);
     buttonCE.setCallback(callbackCE);
+
     window.add(buttonSign);
     buttonSign.setCallback(callbackSign);
+
     window.add(buttonComma);
     buttonComma.setCallback(callbackComma);
+
     window.add(buttonNothing);
 
     window.wait_for_close();
@@ -94,97 +110,4 @@ TDT4102::Button addButton(const TDT4102::Point& buttonPosition, const std::strin
     TDT4102::Button button {buttonPosition, buttonWidth, buttonHeight, buttonLabel};
 
     return button;
-}
-
-int callback1() {
-    output("1");
-    lagTall("1");
-        return 1;
-}
-
-int callback2() {
-    output("2");
-    lagTall("2");
-        return 2;
-    }
-
-int callback3() {
-    output("3");
-    lagTall("3");
-        return 3;
-    }
-
-int callback4() {
-    output("4");
-    lagTall("4");
-        return 4;
-    }
-
-int callback5() {
-    output("5");
-    lagTall("5");
-        return 5;
-    }
-
-int callback6() {
-    output("6");
-    lagTall("6");
-        return 6;
-    }
-
-int callback7() {
-    output("7");
-    lagTall("7");
-        return 7;
-    }
-
-int callback8() {
-    output("8");
-    lagTall("8");
-        return 8;
-    }
-
-int callback9() {
-    output("9");
-    lagTall("9");
-        return 9;
-    }
-
-int callback0() {
-    output("0");
-    lagTall("0");
-        return 0;
-    }
-void callbackComma() {
-    output(".");
-    lagTall(".");
-}
-
-void callbackPlus() {
-    operasjonstrykk("+");
-}
-void callbackMinus() {
-    operasjonstrykk("-");
-}
-void callbackMultiply() {
-    operasjonstrykk("*");
-}
-void callbackDivide() {
-    operasjonstrykk("/");
-}
-
-void callbackC() {
-    clear();
-}
-
-void callbackCE() {
-    clearEntry();
-}
-
-void callbackEquals() {
-    equals();
-}
-
-void callbackSign() {
-    changeSign();
 }
