@@ -2,6 +2,7 @@
 #include "AnimationWindow.h"
 #include "widgets/Button.h"
 #include <iostream>
+#include "calculatorLogikk.h"
 
 void createWindow();
 
