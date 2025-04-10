@@ -107,11 +107,15 @@ void createWindow() {
         int rectangleWidth = 560;
         int rectangleHeight = 150;
         window.draw_rectangle(rectanglePt, rectangleWidth, rectangleHeight, rectangleColor);
+        
+        //Skriver output på vinduet
+        TDT4102::Point location {10, 110};
+        TDT4102::Color textColor = TDT4102::Color::white;
+        int fontSize = 120;
+        window.draw_text(location, "Test", textColor, fontSize);
 
         window.next_frame();
     }
-
-    //Lager og oppdaterer teksten
 
 }
 
@@ -123,9 +127,6 @@ TDT4102::Button addButton(const TDT4102::Point& buttonPosition, const std::strin
     return button;
 }
 
-void updateText(std::string output, TDT4102::AnimationWindow window) {
-    TDT4102::Point location {10, 110};
-    TDT4102::Color textColor = TDT4102::Color::black;
-    int fontSize = 120;
-    window.draw_text(location, output, textColor, fontSize);
+void textOutput(std::string output) {
+    
 }

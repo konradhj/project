@@ -9,4 +9,4 @@ void createWindow();
 
 TDT4102::Button addButton(const TDT4102::Point& buttonPosition, const std::string& buttonLabel);
 
-void updateText(std::string output, TDT4102::AnimationWindow window);
+void textOutput(std::string output);

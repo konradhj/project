@@ -8,7 +8,8 @@ std::vector<double> tall; // endelig tall
 
 void output(std::string nyOutput) {
     message += nyOutput;
-    std::cout << message << std::endl; // TODO! endre til å skrive på vinduet
+    std::cout << message << std::endl; // TODO! endre til å skrive på vinduet@
+    //Kan man sende beskjed til annen funkjson?
 }
 
 
