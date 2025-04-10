@@ -10,3 +10,5 @@ void createWindow();
 TDT4102::Button addButton(const TDT4102::Point& buttonPosition, const std::string& buttonLabel);
 
 void textOutput(std::string output);
+
+void pressedButton();

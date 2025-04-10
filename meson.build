@@ -31,6 +31,7 @@ exe = executable(
 'calculator.cpp',
 'calculatorLogikk.cpp',
 'callback.cpp',
+'globals.cpp',
 'main.cpp',
   dependencies : [animationwindow_dep, sdl2_dep, std_lib_facilities_dep],
   cpp_args : compiler_flags

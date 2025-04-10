@@ -1,5 +1,7 @@
 #include "calculator.h"
+#include "globals.h"
 
+std::string textMessage;
 
 void createWindow() {
 
@@ -101,20 +103,19 @@ void createWindow() {
 
     while (!window.should_close()) {
 
-        //Lager rektangel for det visuelle
-        TDT4102::Point rectanglePt {0, 100};
-        TDT4102::Color rectangleColor = TDT4102::Color::gray;
-        int rectangleWidth = 560;
-        int rectangleHeight = 150;
-        window.draw_rectangle(rectanglePt, rectangleWidth, rectangleHeight, rectangleColor);
         
-        //Skriver output på vinduet
-        TDT4102::Point location {10, 110};
-        TDT4102::Color textColor = TDT4102::Color::white;
-        int fontSize = 120;
-        window.draw_text(location, "Test", textColor, fontSize);
 
+            //Skriver output på vinduet
+            TDT4102::Point location {10, 110};
+            TDT4102::Color textColor = TDT4102::Color::black;
+            int fontSize = 120;
+            window.draw_text(location, textMessage, textColor, fontSize);
+
+            buttonPressed = false;
+
+        
         window.next_frame();
+
     }
 
 }
@@ -128,5 +129,9 @@ TDT4102::Button addButton(const TDT4102::Point& buttonPosition, const std::strin
 }
 
 void textOutput(std::string output) {
-    
+    textMessage += output;
+}
+
+void pressedButton() {
+    buttonPressed = true;
 }
