@@ -7,14 +7,12 @@
 int callback1() {
     output("1");
     lagTall("1");
-    buttonPressed = true;
         return 1;
 }
 
 int callback2() {
     output("2");
     lagTall("2");
-    textOutput("2");
         return 2;
     }
 

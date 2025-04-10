@@ -1,15 +1,9 @@
 #include "calculatorLogikk.h"
-
-std::string message;
-std::vector<std::string> operasjon;
-std::string siffer; // midlertidig tall holder
-std::vector<double> tall; // endelig tall  
-
+#include "globals.h"
 
 void output(std::string nyOutput) {
     message += nyOutput;
-    std::cout << message << std::endl; // TODO! endre til å skrive på vinduet@
-    //Kan man sende beskjed til annen funkjson?
+    std::cout << message << std::endl; // TODO! endre til å skrive på vinduet
 }
 
 
@@ -130,9 +124,8 @@ void equals() {
     message = std::to_string(result);
     output("");
     // Clear uten å skrive ut
-    message = "";
     operasjon.clear();
-    siffer = "";
+    siffer = std::to_string(result);
     tall.clear();
 
 }

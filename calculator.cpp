@@ -103,16 +103,11 @@ void createWindow() {
 
     while (!window.should_close()) {
 
-        
-
-            //Skriver output på vinduet
-            TDT4102::Point location {10, 110};
-            TDT4102::Color textColor = TDT4102::Color::black;
-            int fontSize = 120;
-            window.draw_text(location, textMessage, textColor, fontSize);
-
-            buttonPressed = false;
-
+        //Skriver output på vinduet
+        TDT4102::Point location {10, 110};
+        TDT4102::Color textColor = TDT4102::Color::black;
+        int fontSize = 120;
+        window.draw_text(location, message, textColor, fontSize);
         
         window.next_frame();
 
@@ -126,12 +121,4 @@ TDT4102::Button addButton(const TDT4102::Point& buttonPosition, const std::strin
     TDT4102::Button button {buttonPosition, buttonWidth, buttonHeight, buttonLabel};
 
     return button;
-}
-
-void textOutput(std::string output) {
-    textMessage += output;
-}
-
-void pressedButton() {
-    buttonPressed = true;
 }
