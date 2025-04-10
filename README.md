@@ -2,6 +2,9 @@ Plan for prosjekt:
 
 Kalkulator
 
+GIThub lenke:
+https://github.com/konradhj/project.git
+
 Dokumentasjon:
 
 globals.h & globals.cpp:
